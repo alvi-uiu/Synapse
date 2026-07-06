@@ -1,0 +1,214 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "paper_unknown_0_paper",
+      "type": "paper",
+      "label": "paper",
+      "authors": [],
+      "year": 0,
+      "venue": "",
+      "abstract": "Abstract",
+      "source_file": "papers/paper.pdf",
+      "community": 0
+    },
+    {
+      "id": "task_breast_cancer_diagnosis",
+      "type": "task",
+      "label": "Breast Cancer Diagnosis",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 1,
+        "section": "Abstract",
+        "paragraph": 1
+      },
+      "community": 0
+    },
+    {
+      "id": "task_multimodal_fusion",
+      "type": "task",
+      "label": "Multimodal Fusion",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 1,
+        "section": "Abstract",
+        "paragraph": 1
+      },
+      "community": 0
+    },
+    {
+      "id": "task_explainable_ai",
+      "type": "task",
+      "label": "Explainable AI in Medical Imaging",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 1,
+        "section": "Abstract",
+        "paragraph": 2
+      },
+      "community": 0
+    },
+    {
+      "id": "technique_attention_mechanism",
+      "type": "technique",
+      "label": "Cross-Attention Mechanism",
+      "aliases": [
+        "Cross-Attention"
+      ],
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 4,
+        "section": "Method",
+        "paragraph": 5
+      },
+      "community": 0
+    },
+    {
+      "id": "technique_explainability_module",
+      "type": "technique",
+      "label": "Explainability Module (Attention Visualization)",
+      "aliases": [
+        "Explainability Module",
+        "Attention Visualization"
+      ],
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 5,
+        "section": "Method",
+        "paragraph": 7
+      },
+      "community": 0
+    },
+    {
+      "id": "dataset_brca",
+      "type": "dataset",
+      "label": "BRCA Dataset",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 6,
+        "section": "Experiments",
+        "paragraph": 1
+      },
+      "community": 0
+    },
+    {
+      "id": "dataset_tcga",
+      "type": "dataset",
+      "label": "TCGA-BRCA",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 6,
+        "section": "Experiments",
+        "paragraph": 2
+      },
+      "community": 0
+    },
+    {
+      "id": "result_fusion_accuracy_brca",
+      "type": "result",
+      "label": "Multimodal Fusion Accuracy = 94.2% on BRCA",
+      "value": 94.2,
+      "metric_name": "Accuracy",
+      "dataset_name": "BRCA Dataset",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 7,
+        "section": "Results",
+        "paragraph": 3
+      },
+      "community": 0
+    },
+    {
+      "id": "result_attention_f1",
+      "type": "result",
+      "label": "Cross-Attention F1 = 0.912 on BRCA",
+      "value": 0.912,
+      "metric_name": "F1-Score",
+      "dataset_name": "BRCA Dataset",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 7,
+        "section": "Results",
+        "paragraph": 4
+      },
+      "community": 0
+    },
+    {
+      "id": "claim_outperforms_unimodal",
+      "type": "claim",
+      "label": "Multimodal fusion outperforms single-modality baselines by 5.3%",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 8,
+        "section": "Results",
+        "paragraph": 1
+      },
+      "community": 0
+    },
+    {
+      "id": "contribution_novel_fusion_arch",
+      "type": "contribution",
+      "label": "Novel transformer-based architecture for histopathology and genomics fusion",
+      "source_file": "/home/alvi/Desktop/Amazing Agent Projects/synapse/papers/paper.pdf",
+      "provenance": {
+        "page": 1,
+        "section": "Abstract",
+        "paragraph": 3
+      },
+      "community": 0
+    }
+  ],
+  "links": [
+    {
+      "source": "task_multimodal_fusion",
+      "target": "task_breast_cancer_diagnosis",
+      "relation": "addresses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "task_multimodal_fusion",
+      "target": "result_fusion_accuracy_brca",
+      "relation": "achieves",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "technique_attention_mechanism",
+      "target": "task_multimodal_fusion",
+      "relation": "builds_on",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "technique_attention_mechanism",
+      "target": "result_attention_f1",
+      "relation": "achieves",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "technique_explainability_module",
+      "target": "task_multimodal_fusion",
+      "relation": "builds_on",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "result_fusion_accuracy_brca",
+      "target": "dataset_brca",
+      "relation": "result_on",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "result_attention_f1",
+      "target": "dataset_brca",
+      "relation": "result_on",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synapse"
+version = "0.1.0"
+description = "A lightweight, provenance-tracked knowledge graph for research paper corpus (~100 papers)"
+license = "MIT"
+keywords = ["research", "knowledge-graph", "papers", "nlp", "networkx"]
+requires-python = ">=3.10"
+dependencies = [
+    "networkx>=3.0",
+    "docling>=2.0",
+    "datasketch",
+    "rapidfuzz>=3.0",
+    "sentence-transformers>=2.2",
+    "anthropic>=0.30",
+    "pyvis>=0.3",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+
+[project.scripts]
+synapse = "synapse.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["synapse*"]
