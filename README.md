@@ -23,7 +23,7 @@ Reading research papers is slow. Re-reading them to answer questions is worse.
 
 Synapse solves this by building a **structured knowledge graph** from your papers. Every technique, task, dataset, result, claim, and limitation is extracted — with provenance (page, section, paragraph) — and linked together. After extraction, basic queries like *"Which papers use this dataset?"* or *"What techniques address this task?"* cost **$0** — they're pure graph traversal.
 
-**Key design principle (from the original project):** For ~100 papers, you don't need Neo4j, microservices, or multi-agent systems. NetworkX + SQLite-style cache + one LLM pass per paper is sufficient.
+**Key design principle:** For ~100 papers, you don't need Neo4j, microservices, or multi-agent systems. NetworkX + SQLite-style cache + one LLM pass per paper is sufficient.
 
 ---
 
